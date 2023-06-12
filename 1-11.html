@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>실습2</title>
+  <style>
+    header{
+      text-align: center;
+    }
+    .wrap{
+      text-align: center;
+    }
+    table{
+      display: flex;
+      justify-content: center;
+    }
+    ul li {
+      list-style: none;
+    }
+    hooter{
+      display: flex;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>과제 실습2</h1>
+  </header>
+  <nav></nav>
+  
+  <!-- 웅진씽크빅 홈페이지와 웅진IT 홈페이지 HTML 태그분석하고 
+  시맨틱태그를 사용해야 하는 이유를 만들어보세요.
+  
+  조건
+  1. 시맨틱 태그 사용하기
+  2. 우리가 배운 태그 10개 이상 사용하기 (ul, li, ol,li 태그 포함) -->
+<div class ="wrap">
+  <main>
+    <p>시맨틱 태그를 사용해야 하는 이유</p>
+      웹 문서 레이아웃을 만들 떄 시맨틱 태그를 사용하지 않고 div 태그만을 활용하여<br/>
+      웹 문서를 똑같이 만들 수 있다. 그러나 "웅진씽크빅",  "웅진IT" 홈페이지를 <br/>
+      참고하여 HTML 태그를 분석해보면 모두 시맨틱 태그를 활용하여 홈페이지를 꾸민 걸<br/> 
+      볼 수 있다. 이에대한 이유는 아래와 같다.<br/>
+    <ul>
+      <li>
+        1. 기본적으로 웹페이지를 만들고 유지보수를 하는 것은 개인이 혼자서<br/>
+        하는 것이 아닌 여러사람과 팀단위로 작업하는 것이 기본이다.<br/>
+        혼자서 모든 작업을 유지보수한다면 크게 연관이 없을 수 도 있지만<br/> 
+        HTML의 문서가 길어지면 길어질수록, 팀 단위로 사람이 많아질수록 <br/>
+        파악하기가 힘들어진다.<br/>
+        이 때 빛을 발하는게 시맨틱태그이다. <br/>
+        이를 활용한다면 다른 팀원들이 코드를 파악하기 용이해지며 유지보수와 가독성 <br/>
+        또한 훨씬 쉬워질 수 있기 때문이다.<br/>
+      </li> <br/>
+      <li>
+        2.웹브라우저가 HTML만 보고서도 각각 어느영역인지 쉽게 파악 할 수 있다.<br/>
+        이는 웹 접근성 시각에서도 중요하다.<br/>
+        시각장애인들이 사이트를 이용할 때 사용되는 화면의 텍스트를 읽어주는<br/>
+        스크린 리더기를 통해 활용될 수 있다.<br/>
+      </li> <br/>
+      <li>
+        3. 검색엔진이 검색을 수행할 떄 HTML내의 태그를 분석할 수 있다.<br/>
+      </li>
+    </ul>
+  </main>
+
+
+  <h3>시맨틱 태그의 종류</h3>
+  <table style="border:1px">
+    <th>태그</th>
+    <th>설명</th>
+    <tr>
+      <td>header</td>
+      <td>사이트의 머리부분에 사용</td>
+    </tr>
+    <tr>
+      <td>main</td>
+      <td>메인 콘텐츠를 나타내는데 사용</td>
+    </tr>
+    <tr>
+      <td>section</td>
+      <td>제목별로 나눌 수 있는 문서의 콘텐츠 영역을 구성하는 요소</td>
+    </tr>
+    <tr>
+      <td>article</td>
+      <td>개별 콘텐츠를 나타내는 요소</td>
+    </tr>
+    <tr>
+      <td>aside</td>
+      <td>좌우측의 사이드 영역</td>
+    </tr>
+    <tr>
+      <td>footer</td>
+      <td>사이트의 바닥부분, 주로 연락처나 제작자 정보등을 기술하는 부분</td>
+    </tr>
+    <tr>
+      <td>hgroup</td>
+      <td>제목과 부제목을 묶어서 나타내는 요소</td>
+    </tr>
+    <tr>
+      <td>nav</td>
+      <td>웹페이지 메뉴를 만들 때 사용</td>
+    </tr>
+  </table>
+
+</div>
+
+<hooter>
+<p>후터부분 그냥 사용해보기</p>
+</hooter>
+
+</body>
+</html>
