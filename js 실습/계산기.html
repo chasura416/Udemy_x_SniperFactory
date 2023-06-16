@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>간단한 계산기 만들기</title>
+</head>
+<body>
+  <form>
+    값 1:
+    <input type="number" id="a" name="a"/>
+    값 2:
+    <input type="number" id="b" name="b"/>
+    <br/>
+    <br/>
+    <input type="button" name="add" value="+" onclick="add(a,b)"/>
+    <input type="button" name="sub" value="-" onclick="sub(a,b)"/>
+    <input type="button" name="div" value="/" onclick="div(a,b)"/>
+    <input type="button" name="mul" value="*" onclick="mul(a,b)"/>
+    <br/>
+    <br/>
+    <input type="button" value="계산" onclick="cal()"/>
+    <br/>
+    <br/>
+    결과: 
+    <output name="result" for="a b" value="결과"></output>
+    <input type="text" id="result"/>
+  </form>
+</body>
+  <script>
+    
+    // 팀원들끼리 계산기를 만들어보세요
+    
+    // 1. 덧셈 계산기
+    // 2. 뺼셈 계산기
+    // 3. 곱셈 계산기
+    // 4. 나눗셈 계산기
+    
+    // 조건
+    // 함수로 만들기
+
+    let result = 0;
+
+    const cal = () => {
+      let a = document.getElementById("a").value;
+      let b = document.getElementById("b").value;
+    }
+  
+    // 1. 덧셈 계산기
+    const add = (a,b) => {
+      const a = Number(document.getElementById("a").value);
+      const b = Number(document.getElementById("b").value);
+      const sum = a + b;
+      return sum;
+    }
+  
+    // 2. 뺼셈 계산기
+    const sub = (a,b) => {
+      return result = a - b;
+    }
+  
+    // 3. 곱셈 계산기
+    const mul = (a,b) => {
+      return result = a * b;
+    }
+  
+    // 4. 나눗셈 계산기
+    const div = (a,b) => {
+      return result = a / b;
+    }
+  
+  </script>
+</html>

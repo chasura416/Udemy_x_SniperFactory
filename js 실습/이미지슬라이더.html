@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이미지 슬라이더 만들기</title>
+  <style>
+     .container{
+      width: 500px;
+      /* height: 500px; */
+      text-align: center;
+    }
+    #randomImage{
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+    }
+    button{
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <!-- 팀원들과 센스 넘치는 이미지 슬라이더를 만들어보세요 -->
+
+  <!-- 조건
+  1. 이전 버튼을 클릭하면 이전 이미지로 변경
+  2. 다음 버튼을 클릭하면 다음 이미지로 변경
+  3. 순수 바닐라 자바스크립트로 만들기
+  4. 팀원들에게 멋진 사진들을 받아서 팀원들의 이미지를 사용 -->
+
+  <div class="container">
+    <img id="randomImage" src="/img/dog1.jpeg" alt="dog" onclick="toggleImg()"/>
+    <button onclick="prePic()">이전</button>
+    <button onclick="nextPic()">다음</button>
+  </div>
+
+</body>
+<script>
+  const imageArr = [
+    "/img/dog1.jpeg",
+    "/img/dog2.jpeg",
+    "/img/dog3.jpeg",
+    "/img/dog4.jpeg",
+    "/img/dog5.jpeg",
+    "/img/dog6.jpeg",
+    "/img/dog7.jpeg",
+    "/img/dog8.jpg"
+  ]
+  const toggleImg = () => {
+    // document.getElementById("img").src = math.round(math.random(imageArr));
+    const randomIndex = Math.floor(Math.random() * imageArr.length);
+    const randomImage = imageArr[randomIndex];
+    document.getElementById("randomImage").src = randomImage;
+  }
+  // 클릭 이벤트인데 이미지에 온클릭을 안해도 되는건가? 일단 안되던데 헷갈리니까 체크할 것.
+  // document.getElementById("randomImage").addEventListener("click", toggleImg());
+
+  const prePic = () => {
+    document.getElementById("img").src = "/img/dog2.jpeg"
+  }
+  const nextPic = () => {
+    
+  }
+
+  const ImageHandler = () => {
+    
+  }
+</script>
+</html>

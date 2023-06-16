@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이미지 랜덤 변환</title>
+  <style>
+    .container{
+      width: 500px;
+      /* height: 500px; */
+      text-align: center;
+    }
+    #randomImage{
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+    }
+    button{
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+    <!-- 팀원들끼리 좋아하는 연예인 사진을 랜덤으로 변하게 만들어보세요 -->
+
+  <!-- 조건
+  1. 이미지 클릭 시, 사진 랜덤으로 변경
+  2. 연예인 사진 최소 8장 삽입 -->
+
+
+  <div class="container">
+    <img id="randomImage" src="/img/dog1.jpeg" alt="dog" onclick="toggleImg()"/>
+    <button onclick="prePic()">이전</button>
+    <button onclick="nextPic()">다음</button>
+  </div>
+
+</body>
+<script>
+  const imageArr = [
+    "/img/dog1.jpeg",
+    "/img/dog2.jpeg",
+    "/img/dog3.jpeg",
+    "/img/dog4.jpeg",
+    "/img/dog5.jpeg",
+    "/img/dog6.jpeg",
+    "/img/dog7.jpeg",
+    "/img/dog8.jpg"
+  ]
+  const toggleImg = () => {
+    // document.getElementById("img").src = math.round(math.random(imageArr));
+    const randomIndex = Math.floor(Math.random() * imageArr.length);
+    const randomImage = imageArr[randomIndex];
+    document.getElementById("randomImage").src = randomImage;
+  }
+
+  document.getElementById("randomImage").addEventListener("click", toggleImg());
+
+  const prePic = () => {
+    document.getElementById("img").src = "/img/dog2.jpeg"
+  }
+  const nextPic = () => {
+    
+  }
+
+  const ImageHandler = () => {
+    
+  }
+</script>
+</html>
