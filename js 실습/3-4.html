@@ -7,20 +7,68 @@
   <title>3-4</title>
 </head>
 <body>
-  
+  <h1 id="demo"></h1id>
 </body>
 <script>
+
+  // length 문자의 수룰 세준다
   // let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   // let length = text.length;
   // console.log(length);
 
-  let text = "Apple, Banana, Kiwi";
-  let part = text.slice(7, 13);
-  console.log(part);
+  // slice 문자열을 잘라준다.
+  // let text = "Apple, Banana, Kiwi";
+  // let part = text.slice(7, 13);
+  // console.log(part);
 
+  // replace 문자를 다른 문자로 대체 한다.
   // let text = "Please visit Microsoft!";
   // let newtext = text.replace("Microsoft", "W3Schools");
   // console.log(newtext);
+
+  // let text1 = "Hello World!";
+  // let text2 = text1.toUpperCase();
+  // console.log(text2);
+
+  // let text3 = "Hello World!";
+  // let text4 = text3.toLowerCase();
+  // console.log(text4);
+  
+  // let text5 = "Hello";
+  // let text6  = "World";
+  // let text7 = text5.concat(" ", text6);
+  // console.log(text7);
+
+
+  // 문자열 검섹
+  // 둘 다 일치하는 값이 없다면 -1을 리턴한다.
+
+  // 이 메서드는 문자열에서 문자열이 처음 나타나는 인덱스(위치)를 indexOf() 반환  (뒤에서부터 검색)
+  // let text1 = "Please locate where 'locate' occurs!";
+  // let index1 = text1.lastIndexOf("john");
+  // console.log(index1);
+
+  // 시작위치로 두 번째 매개변수를 허용한다.  (앞에서부터 검색)
+  // let text2 = "Please locate where 'locate' occurs!";
+  // let index2 = text2.indexOf("locate", 15);
+  // console.log(index2);
+
+
+  // 템플릿 리터럴
+  // 템플릿 리터럴은 따옴표("") 대신 백틱(₩₩)을 사용하여 문자열을 정의한다.
+  // let text = `Hello World!`;
+  // console.log(text);
+
+  // let firstName = "john";
+  // let lastName = "Doe";
+
+  // let text1 = `Welcome ${firstName}, ${lastName}!`;
+
+  // console.log(text1);
+
+  const fruits = ["Banana", "Orange", "Apple", "Mango"];
+  document.getElementById("demo").innerHTML = fruits.toString();
+  console.log(fruits.toString());
 
 </script>
 </html>
