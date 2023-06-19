@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>실시간 채팅</title>
   <style>
+    body{
+      margin: 0;
+    }
     header{
       width: auto;
       height: 180px;
@@ -16,23 +19,33 @@
       color: #fff;
       background-color: rgb(98, 135, 98);
     }
+    .chat-content{
+      display: flex;
+      align-items: center;
+      margin: 20px;
+      margin-bottom: 0;
+      gap: 7px;
+    }
+    .user-info{
+      margin-left: 20px;
+    }
   </style>
 </head>
 <body>
   <header>실시간 채팅</header>
   <main>
-    <section>
-      <div>
+    <section class="chatting-list">
+      <div class="chat-content">
         <h3>User 1:</h3>
         <p>안녕하세요!</p>
       </div>
     </section>
-    <section>
-      <div>
-        <input type="text" alt="사용자명"/>
-        <input type="text" alt="메시지를 입력하세요"/>
-        <button>전송</button>
-      </div>
+    <section class="user-info">
+      <input id="user" type="text" placeholder="사용자명"/>
+      <input id="content" type="text" placeholder="메시지를 입력하세요"/>
+      <button class="add-to-chat">전송</button>
+      <!-- <div>
+      </div> -->
     </section>
   </main>
   <script src="script02.js"></script>  
