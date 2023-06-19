@@ -32,12 +32,13 @@
 
   <div class="container">
     <img id="randomImage" src="/img/dog1.jpeg" alt="dog" onclick="toggleImg()"/>
-    <button onclick="prePic()">이전</button>
-    <button onclick="nextPic()">다음</button>
+    <button class="beforeBtn" onclick="prePic()">이전</button>
+    <button class="afterBtn" onclick="nextPic()">다음</button>
   </div>
 
 </body>
 <script>
+
   const imageArr = [
     "/img/dog1.jpeg",
     "/img/dog2.jpeg",
@@ -48,6 +49,7 @@
     "/img/dog7.jpeg",
     "/img/dog8.jpg"
   ]
+
   const toggleImg = () => {
     // document.getElementById("img").src = math.round(math.random(imageArr));
     const randomIndex = Math.floor(Math.random() * imageArr.length);
@@ -57,12 +59,42 @@
   // 클릭 이벤트인데 이미지에 온클릭을 안해도 되는건가? 일단 안되던데 헷갈리니까 체크할 것.
   // document.getElementById("randomImage").addEventListener("click", toggleImg());
 
+
   const prePic = () => {
-    document.getElementById("img").src = "/img/dog2.jpeg"
+    // document.getElementById("img").src = "/img/dog2.jpeg"
+
+    // const randomIndex = Math.floor(Math.random() * imageArr.length);
+    // const randomImage = imageArr[randomIndex];
+    // document.getElementById("randomImage").src = randomImage;
+
+
+    const currentIndex = (currentIndex - 1 + imageArr.length) % imageArr.length;
+    const currentImage = imageArr[currentIndex];
+    document.getElementById("beforeBtn").src = randomImage;
+    document.getElementById("beforeBtn").addEventListener("click", prePic());
   }
+
+
+  console.log(imageArr.length);
+  console.log(imageArr[0]);
+  // document.querySelector(".beforeBtn").addEventListener("click", function(idx){
+  //   currentIndex = (currentIndex - 1 + imageArr.length) % imageArr.length;
+  // });
+  
+  
+  // document.querySelector(".afterBtn").addEventListener("click", function(idx){
+  //   currentIndex = (currentIndex + 1 + imageArr.length) % imageArr.length;
+  // });
+  
+  
+  
   const nextPic = () => {
-    
+    const currentIndex = (currentIndex + 1 + imageArr.length) % imageArr.length;
+    const currentImage = imageArr[currentIndex];
+    document.getElementById("afterBtn").src = randomImage;
+    document.getElementById("afterBtn").addEventListener("click", nextPic());
   }
+  
 
   const ImageHandler = () => {
     
