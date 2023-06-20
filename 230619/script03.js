@@ -1,3 +1,6 @@
+const 
+
+
 function addTodo() {
   let newTodo = document.createElement("li");
   newTodo.textContent;
@@ -9,6 +12,6 @@ function completeTodo() {
 }
 
 function deleteTodo() {
-  
+
 }
 

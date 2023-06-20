@@ -10,6 +10,8 @@
     }
     body{
       margin: 0;
+    }
+    #bgimg{
       height: 100vh;
       width: 100vw;
       background-image: url('https://images.pexels.com/photos/1563356/pexels-photo-1563356.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
@@ -17,6 +19,7 @@
       background-position: center;
       background-size: cover;
     }
+
     header{
       display: flex;
       justify-content: flex-end;
@@ -31,12 +34,14 @@
     .mainwrap {
       width: 400px;
       text-align: center;
+
     }
     .h1-clock {
       /* all: unset; */
       font-size: 80px;
       text-align: left;
       font-variant-numeric: tabular-nums;
+      padding-left: 50px;
     }
 
 
@@ -48,22 +53,24 @@
   </style>
 </head>
 <body>
-  <header>일단 여기다가 실시간 날씨</header>
-  <main>
-    <section class="mainwrap">
-      <h1 class="h1-clock"></h1>
-      <div>굿모닝 등 인사랑 이름 바뀌기</div>
-    </section>
-    <!-- <section>
-      <div></div>
-      <div></div>
-    </section> -->
-  </main>
-  <footer>
-    <div>왼쪽</div>
-    <div>후터후터크크크</div>
-    <div>오른쪽</div>
-  </footer>
+  <div id="bgimg">
+    <header>일단 여기다가 실시간 날씨</header>
+    <main>
+      <section class="mainwrap">
+        <h1 class="h1-clock"></h1>
+        <div>굿모닝 등 인사랑 이름 바뀌기</div>
+      </section>
+      <!-- <section>
+        <div></div>
+        <div></div>
+      </section> -->
+    </main>
+    <footer>
+      <div>왼쪽</div>
+      <div>후터후터크크크</div>
+      <div>오른쪽</div>
+    </footer>
+  </div>
 </body>
-<script src="script.js"></script>
+<script src="toDoList.js"></script>
 </html>
