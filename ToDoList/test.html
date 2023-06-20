@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .clock{
+            display:flex;
+            list-style: none;
+        }
+        .clock li{
+            margin-right:5px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="">안녕하세요!</div>
+        <div class="clock">
+            <li id="hour"></li>
+            <li id="min"></li>
+            <li id="sec"></li>
+        </div>
+    </div>
+    <script>
+        var hour = document.getElementById('hour');
+        var min = document.getElementById('min');
+        var sec = document.getElementById('sec');
+
+        setInterval(()=>{
+            var d = new Date();
+            hour.innerText = d.getHours()
+            min.innerText = d.getMinutes()
+            sec.innerText = d.getSeconds()
+        },1000)
+
+
+    </script>
+</body>
+</html>

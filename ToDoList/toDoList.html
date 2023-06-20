@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>230620 과제</title>
+  <style>
+    body{
+      margin: 0;
+    }
+    header{
+      display: flex;
+      justify-content: flex-end;
+    }
+
+
+    main{
+      display: flex;
+      justify-content: center;
+      align-content: center;
+    }
+    .mainwrap {
+      width: 400px;
+      text-align: center;
+    }
+    .h1-clock {
+      /* all: unset; */
+      font-size: 80px;
+      font-variant-numeric: tabular-nums;
+    }
+
+
+    footer{
+      display: flex;
+      justify-content: space-between;
+    }
+    
+  </style>
+</head>
+<body>
+  <header>일단 여기다가 실시간 날씨</header>
+  <main>
+    <section class="mainwrap">
+      <h1 class="h1-clock"></h1>
+      <div>굿모닝 등 인사랑 이름 바뀌기</div>
+    </section>
+    <!-- <section>
+      <div></div>
+      <div></div>
+    </section> -->
+  </main>
+  <footer>
+    <div>왼쪽</div>
+    <div>후터후터크크크</div>
+    <div>오른쪽</div>
+  </footer>
+</body>
+<script src="script.js"></script>
+</html>
