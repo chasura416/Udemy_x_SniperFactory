@@ -9,7 +9,7 @@
       color: #fff;
     }
     body{
-      margin: 0;
+      margin: 0 auto;
     }
     #bgimg{
       height: 100vh;
@@ -30,6 +30,8 @@
       display: flex;
       justify-content: center;
       align-content: center;
+      /* flex-direction: column; */
+      height: 100vh;
     }
     .mainwrap {
       width: 400px;
@@ -59,11 +61,16 @@
       <section class="mainwrap">
         <h1 class="h1-clock"></h1>
         <div>굿모닝 등 인사랑 이름 바뀌기</div>
+        <div class="addTodo">
+          <form>
+            <input type="text" placeholder="오늘의 할 일을 적어보세요"/>
+            <button>추가</button>
+          </form>
+        </div>
+        <ul class="todo">
+  
+        </ul>
       </section>
-      <!-- <section>
-        <div></div>
-        <div></div>
-      </section> -->
     </main>
     <footer>
       <div>왼쪽</div>
