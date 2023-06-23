@@ -4,6 +4,7 @@ import Practice02 from "components/02";
 import Practice03 from "components/03";
 import Practice04 from "components/04";
 import Practice05 from "components/05";
+import Practice06 from "components/06";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Practice03 />
       <Practice04 />
       <Practice05 />
+      <Practice06 />
     </div>
   );
 }
