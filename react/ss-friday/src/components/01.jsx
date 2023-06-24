@@ -20,34 +20,48 @@ const LoginForm = () => {
 
     if(loginid === 'admin' && password === 'password') {
       console.log("로그인 성공!");
+      alert('로그인 성공!');
     }
     else {
       console.log("로그인 실패!");
+      alert('로그인 실패!');
     }
   }
 
 
   return (
-  <div>
-    <form onSubmit={onSubmitHandler}>
+  <div style={{
+      display: 'flex',
+      justifyContent: 'center',
+      // alignItems: 'center',
+      // flexDirection: 'column',
+      width: '100%',
+      // height: '100vh',
+  }}>
+    <form
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+      }} 
+      onSubmit={onSubmitHandler
+    }>
       
-      <label>ID : </label>
+      <label>ID</label>
       <input 
         type="text" 
         value={loginid} 
         placeholder="사용자명"
         onChange={onLoginHandler}
       /> 
-      <br/><br/>
 
-      <label>PW : </label>
+
+      <label>PASSORD</label>
       <input 
         type="password" 
         value={password} 
         placeholder="비밀번호"
         onChange={onPasswordHandler}
       />
-      <br/><br/>
 
       <button formAction="">로그인</button>
 
@@ -55,5 +69,12 @@ const LoginForm = () => {
   </div>
  );
 }
+
+// const StLoginContainer = styled.div`
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   flex-direction: column;
+// `;
 
 export default LoginForm;
