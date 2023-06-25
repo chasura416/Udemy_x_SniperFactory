@@ -13,14 +13,12 @@
   </div>
     <script>
       const weather = document.getElementById("weather");
-      const API_KEY = "3699627eb2a385146c2a97bfd16195ea";
-      // const API_KEY = "15f8fbf5168d6da001f1e3c2c4b76277";
       
       function getWeather(lat, lon) {
         console.log(lat, lon);
         console.log(API_KEY);
         fetch(
-          `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}`
+          `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}`
         )
         .then(function (response) {
           return response.json();

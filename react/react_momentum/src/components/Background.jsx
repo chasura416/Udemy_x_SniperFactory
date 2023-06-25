@@ -1,18 +1,33 @@
 import React from "react";
 import { styled } from "styled-components";
-import image_01 from "../assets/background/img/image 01.jpg"
-import image_02 from "../assets/background/img/image 02.jpg"
-import image_03 from "../assets/background/img/image 03.jpg"
-import image_04 from "../assets/background/img/image 04.jpg"
-import image_05 from "../assets/background/img/image 05.jpg"
-import image_06 from "../assets/background/img/image 06.jpg"
-import image_07 from "../assets/background/img/image 07.jpg"
+import image_01 from "../assets/background/img/image01.jpg"
+import image_02 from "../assets/background/img/image02.jpg"
+import image_03 from "../assets/background/img/image03.jpg"
+import image_04 from "../assets/background/img/image04.jpg"
+import image_05 from "../assets/background/img/image05.jpg"
+import image_06 from "../assets/background/img/image06.jpg"
+import image_07 from "../assets/background/img/image07.jpg"
+import Clock from "./Clock";
+import Greeting from "./Greeting";
+import Weather from "./Weather";
+import Todolist from "./Todolist";
 
+const bgimgArr = [
+  image_01, image_02, image_03, 
+  image_04, image_05, image_06,
+  image_07
+];
+
+const randomIndex = Math.floor(Math.random() * bgimgArr.length);
+const bgImg = bgimgArr[randomIndex];
 
 const Background = () => {
  return (
   <StBackGroundImageContainer>
-    <img src={image_01} alt="배경화면 이미지 1" />
+    <Weather />
+    <Clock />
+    <Greeting />
+    <Todolist />
   </StBackGroundImageContainer>
  ); 
 }
@@ -20,7 +35,11 @@ const Background = () => {
 const StBackGroundImageContainer = styled.div`
   height: 100vh;
   width: 100vw;
-  /* background-image: url('https://images.pexels.com/photos/1563356/pexels-photo-1563356.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); */
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.4), 
+    rgba(0, 0, 0, 0.7)
+    ),
+    url(${bgImg});
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
