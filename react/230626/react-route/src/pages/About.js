@@ -1,9 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom"
 
 const About = () => {
+  const navigate = useNavigate();
+  const [search, setSearch] = useState("");
+  
+  const onsubmit = (event) => {
+    event.preventDefault();
+    navigate(`/search?query=${search}`)
+  }
+  
+  const onChange = (event) => {
+    console.log(event.target.value)
+    setSearch(event.target.value)
+  }
+
   return(
     <div>
-      About
+      <h1>about</h1>
+      <form onSubmit={onsubmit}>
+        <input 
+          type="text" 
+          value={search} 
+          onChange={onChange}
+          placeholder="여행가고 싶은 지역" 
+        />
+        <button type="submit">검색</button>
+      </form>
     </div>
   );
 }
