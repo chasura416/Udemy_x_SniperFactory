@@ -6,9 +6,13 @@ const SearchResults = () => {
   const location = useLocation();
   console.log(location);
   const queryParams = new URLSearchParams(location.search);
-  const query = queryParams.get("queryParams");
+  console.log(queryParams);
+  const query = queryParams.get("query");
   
-  useEffect(()=> console.log(query),[query]);
+  useEffect(()=> {
+    
+    console.log(query);
+  } ,[query]);
 
 
   return(

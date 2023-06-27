@@ -11,7 +11,7 @@ const About = () => {
   }
   
   const onChange = (event) => {
-    console.log(event.target.value)
+    // console.log(event.target.value)
     setSearch(event.target.value)
   }
 
