@@ -4,6 +4,8 @@ import Timer from 'components/timer';
 import TextMemo from 'components/textarea';
 import HideTimer from 'components/hide_timer';
 import ThemeChange from 'components/themeChange';
+import ThemeReducerSwitcher from 'components/themeReducer';
+
 
 function App() {
   return (
@@ -13,6 +15,7 @@ function App() {
       <TextMemo />
       <HideTimer />
       <ThemeChange />
+      <ThemeReducerSwitcher />
     </div>
   );
 }
