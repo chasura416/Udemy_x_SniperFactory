@@ -1,7 +1,7 @@
-import React from 'react'
-import { useState } from 'react'
+import React from 'react';
+import { useState } from 'react';
 
-const counter = () => {
+const Counter = () => {
   const [counter, setCounter] = useState(0);
   
   const increment = () => {
@@ -10,10 +10,10 @@ const counter = () => {
 
   return(
     <div>
-      <p>값 : </p>
+      <p>값 : {counter}</p>
       <button onClick={increment}>증가</button>
     </div>
   );
 }
 
-export default counter;
+export default Counter;
