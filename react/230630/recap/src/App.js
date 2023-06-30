@@ -3,6 +3,7 @@ import Counter from 'components/count';
 import Timer from 'components/timer';
 import TextMemo from 'components/textarea';
 import HideTimer from 'components/hide_timer';
+import ThemeChange from 'components/themeChange';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Timer />
       <TextMemo />
       <HideTimer />
+      <ThemeChange />
     </div>
   );
 }
