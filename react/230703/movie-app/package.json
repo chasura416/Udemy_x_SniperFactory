@@ -1,5 +1,5 @@
 {
-  "name": "practice-redux",
+  "name": "movie-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -12,7 +12,7 @@
     "react-redux": "^8.1.1",
     "react-scripts": "5.0.1",
     "redux-logger": "^3.0.6",
-    "styled-components": "^6.0.1",
+    "styled-components": "^6.0.2",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

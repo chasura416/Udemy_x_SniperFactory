@@ -1,6 +1,6 @@
 import React, {useReducer, useState} from 'react';
 
-const initialState = 0;
+const initialState = [];
 
 const reducer = (state, action) => {
   switch(action.type) {
@@ -24,10 +24,14 @@ const ToDoList = () => {
         id: Date.now(),
         text: input,
       }
+      dispatch({type: "ADD_TODO", payload: newTodo});
+      setInput("");
     }
-    dispatch( {type: "ADD_TODO", payload: newTodo} );
-    setInput("");
-  }
+  };
+
+  const deleteTodo = (id) => {
+    dispatch({type: "DELETE_TODO", payload:id});
+  };
 
 
   return (
@@ -36,16 +40,15 @@ const ToDoList = () => {
       <input 
         type="text" 
         value={input} 
-        onChange={(e) => {
-          setInput(e.target.value)
-        }} 
+        onChange={(e) => setInput(e.target.value)} 
         placeholder= "오늘 할 일"
       />
       <button onClick={addTodo}>Add Todo</button>
       <ul>
         {todos.map((todo) => (
-          <li key="index">
-
+          <li key={todo.id}>
+            {todo.text}
+            <button onClick={() => deleteTodo(todo.id)}>Delete</button>
           </li>
         ))}
       </ul>
