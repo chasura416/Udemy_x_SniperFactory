@@ -1,11 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import auth from 'fConfig';
+import Auth from 'routes/Auth';
+
 
 function App() {
-  console.log(process.env.REACT_APP_FIREBASE_API_KEY);
-  console.log(1+2);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
   return (
     <div className="App">
-      파이어베이스 시작화면
+      <Router>
+        <Routes>
+          <Route path="/" element={<Auth />} isLoggedIn={isLoggedIn}></Route>
+        </Routes>
+      </Router>
     </div>
   );
 }
