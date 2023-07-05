@@ -56,7 +56,7 @@ const Auth = ({isLoggedIn}) => {
 
   return (
     <>
-      {isLoggedIn ? (
+      {loginState ? (
         <Home /> 
       ) : (
         <div>
