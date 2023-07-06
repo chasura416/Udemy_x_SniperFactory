@@ -57,7 +57,7 @@ const Auth = ({isLoggedIn}) => {
   return (
     <>
       {loginState ? (
-        <Home /> 
+        <Home setLoginState={setLoginState} /> 
       ) : (
         <div>
           <form onSubmit={onSubmit}>
